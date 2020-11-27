@@ -44,10 +44,10 @@
 
 #define ANALOG_INPUT_NUM 4
 
-#define BASE_SERVO_MIN   80     // RIGHT
-#define BASE_SERVO_MAX  100     // LEFT
+#define BASE_SERVO_MIN   10     // RIGHT
+#define BASE_SERVO_MAX  170     // LEFT
 #define UPPER_SERVO_MIN  50     // UP
-#define UPPER_SERVO_MAX  85     // DOWN
+#define UPPER_SERVO_MAX 110     // DOWN
 #define SERVO_DIFF_DEF   0.1
 #define SERVO_DIFF_MAX   1
 
@@ -217,7 +217,7 @@ int irBatteryControl_main(int argc, char *argv[])
   //TM1637_init(PIN_SPI3_CS1_X, PIN_SPI2_MOSI, TM1637_BRIGHT_TYPICAL);
 
   double a0_angle = (BASE_SERVO_MAX + BASE_SERVO_MIN) / 2.0;
-  double a1_angle = UPPER_SERVO_MAX;
+  double a1_angle = 85;
   servo_set_angle(0, a0_angle);
   servo_set_angle(1, a1_angle);
   float servo_diff = SERVO_DIFF_DEF;
